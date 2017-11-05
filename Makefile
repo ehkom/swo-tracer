@@ -1,4 +1,4 @@
-PREFIX ?= /usr/local
+PREFIX ?= /usr/local/bin
 CFLAGS = -Wall -Werror -std=gnu99 -O
 
 include os-detect.inc
@@ -11,8 +11,8 @@ swo-tracer: $(OBJS)
 	gcc $(CFLAGS) $^ -o $@
 
 install: swo-tracer
-	install -d $(PREFIX)/bin
-	install $< $(PREFIX)/bin/$<
+	install -d $(PREFIX)
+	install $< $(PREFIX)/$<
 
 clean:
 	@rm -f $(OBJS) swo-tracer
