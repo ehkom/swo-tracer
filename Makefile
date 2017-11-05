@@ -1,5 +1,5 @@
 PREFIX ?= /usr/local
-CFLAGS = -Wall -Werror -std=gnu99
+CFLAGS = -Wall -Werror -std=gnu99 -O
 
 include os-detect.inc
 
